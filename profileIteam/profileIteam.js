@@ -4,14 +4,22 @@ var Schema = mongoose.Schema;
 
 
 var profileIteamSchema = new Schema({
-    workflowiteamID:{
+    workflowID:{
         type:String
+    },
+    workflowItemID:{
+        type: String
     },
     description:{
         type: String
     },
     status:{
-        type: Boolean
+        type: Number,
+        default:0
+    },
+    action:{
+      type:Boolean,
+        default: false
     },
     profileID:{
         type : String

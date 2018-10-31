@@ -7,9 +7,18 @@ var WorkflowSchema = new Schema({
     title: {
         type: String
     },
-    orderId:{
-      type: Number
-    },
+    workflowItem:[{
+        title: {
+            type: String
+        },
+        assignee:{
+            type: String
+        },
+        orderID:{
+            type: Number,
+            default:0
+        },
+    }],
     Created_date: {
         type: Date,
         default: Date.now
